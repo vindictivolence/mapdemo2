@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ko2wy7561id7"]
+
+[ext_resource type="Texture2D" uid="uid://k86jtdrqyxl7" path="res://zr_discord_nitro_nostars.png" id="1_s64y3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fn6t6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s64y3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjkim"]
+size = Vector2(128, 128)
+
+[node name="Player" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fn6t6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yjkim")
